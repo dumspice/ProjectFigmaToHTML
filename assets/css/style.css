@@ -20,6 +20,15 @@ a {
     text-decoration: none;
 }
 
+.heading_lv2{
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
 .btn {
     color: #FFF;
     text-align: center;
@@ -280,3 +289,55 @@ a {
 .hero .stats strong:nth-child(2){
     margin: 36px;
 }
+
+/* =============== popular ================= */
+
+.popular{
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular_top .desc{
+    color: #5F5B53;
+    margin-top: 16px;
+    width: 458px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular_top .control{
+    display: flex;
+    gap: 18px;
+}
+
+.control .control_btn{
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: none;
+    border-radius: 40px;
+    border: 1px solid var(--primary-color);
+}
+
+.control .control_btn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .control .control_btn:first-child{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.control .control_btn:nth-child(2){
+    background-color: var(--primary-color);
+} */
