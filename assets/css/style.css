@@ -6,6 +6,7 @@
   --font-heading: "Sen", sans-serif;
   --primary-color: #ffb900;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -18,6 +19,7 @@ body {
 /* Common */
 a {
   text-decoration: none;
+  color: #000;
 }
 
 .heading_lv2 {
@@ -49,8 +51,22 @@ a {
   max-width: calc(100% - 48px);
 }
 
-/* Header */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
+.line-clamp.line_2 {
+  --line-clamp: 2;
+}
+
+.break_all {
+  word-break: break-all;
+}
+
+/* Header */
 .header {
   background: #fffcf4;
 }
@@ -84,8 +100,7 @@ a {
 
 .nav li.active a,
 .nav a:hover {
-  color: #171100;
-  /* font-weight: 600; */
+  color: #171100; /* font-weight: 600; */
   text-shadow: 1px 0 0 currentColor;
 }
 
@@ -114,7 +129,6 @@ a {
 }
 
 /* Hero */
-
 .hero {
   padding: 56px 0 65px;
   background-color: #fffcf4;
@@ -125,7 +139,6 @@ a {
 }
 
 /* ============== Hero left ================ */
-
 .hero .media_block {
   width: 48%;
   position: relative;
@@ -209,8 +222,7 @@ a {
   font-size: 5.8rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.17;
-  /* 117.241% */
+  line-height: 1.17; /* 117.241% */
   letter-spacing: -1.16px;
 }
 
@@ -289,7 +301,6 @@ a {
 }
 
 /* =============== popular ================= */
-
 .popular {
   padding: 65px 0;
   margin-top: 135px;
@@ -307,7 +318,7 @@ a {
   width: 458px;
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.67; /* 166.667% */ 
+  line-height: 1.67; /* 166.667% */
 }
 
 .popular_top .control {
@@ -336,7 +347,9 @@ a {
   display: flex;
   gap: 30px;
 }
+
 .popular .course_items {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background-color: #fff;
