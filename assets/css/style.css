@@ -50,7 +50,7 @@ a {
   margin-right: auto;
   max-width: calc(100% - 48px);
 }
-
+/* line clamp: Them dau ... vo ngan viec van ban dai qua lam hong trang */
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: var(--line-clamp, 1);
@@ -61,6 +61,8 @@ a {
 .line-clamp.line_2 {
   --line-clamp: 2;
 }
+
+/* Break all: xuong dong o cho nghi ngo bi mat dong */
 
 .break_all {
   word-break: break-all;
@@ -422,4 +424,69 @@ a {
 .popular .course_items .btn_book:hover {
   background-color: var(--primary-color);
   cursor: pointer;
+}
+
+/* ============= Feedback =============== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px;
+  background-color: #2e2100;
+}
+
+.feedback_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback_item .info {
+  width: 159px;
+  height: 188px;
+}
+
+.avatar_name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+
+.avatar_desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.feedback_item .content {
+  width: 65.8%;
+  height: 188px;
+}
+
+.feedback_item .content blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54; /* 153.846% */
+}
+
+.feedback_item .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+}
+
+.feedback_item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback_item .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
 }
