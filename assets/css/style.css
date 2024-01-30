@@ -546,3 +546,21 @@ a {
   height: 50px;
   background: var(--primary-color);
 }
+
+/* ================ features 2 ================= */
+.features_2nd {
+  margin-top: 70px;
+}
+
+.features_2nd .body {
+  flex-direction: row-reverse;
+}
+.features_2nd .content {
+  width: 49%;
+}
+.features_2nd .image img {
+  width: 470px;
+  height: 440px;
+  border-radius: 27px;
+  object-fit: cover;
+}
