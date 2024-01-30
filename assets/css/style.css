@@ -76,6 +76,7 @@ a {
 .header.fixed {
   z-index: 1;
   position: sticky;
+  /* top -28px de nav cach dau trang roi khi keo xuong se dinh vao dau trang */
   top: -28px;
 }
 
@@ -594,12 +595,15 @@ a {
   display: flex;
   margin-top: 55px;
   gap: 30px;
+  overflow: hidden;
 }
 
 .blog .item {
-  width: 33.3%;
+  /* Do width 33.33% va gap 30 nen bi hut khoang 20px lay (width*so khoang cach)/so items --> so px bi hut */
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background-color: #fff;
+  flex-shrink: 0;
 }
 
 .blog .item:hover {
@@ -661,8 +665,27 @@ a {
 }
 .blog .content .btn {
   margin-top: 12px;
+  font-size: 1.4rem;
 }
 
 .blog .content .btn:hover {
   background-color: var(--primary-color);
+}
+
+.blog .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blog .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #5f5b53;
+}
+
+.blog .dot.active {
+  background: var(--primary-color);
 }
