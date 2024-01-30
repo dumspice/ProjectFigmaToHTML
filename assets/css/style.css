@@ -443,6 +443,11 @@ a {
   justify-content: space-between;
   flex-shrink: 0;
   width: 100%;
+  /* 
+    lam chuyen dong truot khi nguoi dung vuot
+    transform: translateX(-100%);
+    transition: all ease time;
+  */
 }
 
 .feedback_item .info {
@@ -563,4 +568,101 @@ a {
   height: 440px;
   border-radius: 27px;
   object-fit: cover;
+}
+
+/* ============== Blog ============== */
+
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #fffcf4;
+}
+
+.blog .blog_top {
+  text-align: center;
+}
+
+.blog .blog_top .desc {
+  width: 448px;
+  margin: 16px auto 0;
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+.blog .blog_list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+
+.blog .item {
+  width: 33.3%;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.blog .item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.blog .item .thumb {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.blog .item .content {
+  padding: 20px 20px 28px;
+}
+
+.blog .content .date {
+  /* The cha chi chua vua noi dung cua no khi dung inline-flex */
+  display: inline-flex;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  padding-bottom: 12px;
+  line-height: 1.86; /* 185.714% */
+  align-items: center;
+  position: relative;
+}
+
+/* ::before, ::after co the duoc coi la the con cua selector dung no --> tac dong duoc display, ... */
+.blog .content .date::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 4px;
+  background-color: var(--primary-color);
+}
+
+.blog .content .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* right: -27px de cai gach chan dich han sang ben phai */
+  right: -27px;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  border-radius: 0.5px;
+  background-color: #e2dfda;
+}
+
+.blog .content .title {
+  color: #171100;
+  margin-top: 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+.blog .content .btn {
+  margin-top: 12px;
+}
+
+.blog .content .btn:hover {
+  background-color: var(--primary-color);
 }
