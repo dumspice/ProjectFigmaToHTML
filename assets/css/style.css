@@ -351,7 +351,7 @@ a {
 }
 
 .popular .course_items {
-  flex: 1;
+  flex: 1; /* dam bao chu dai cung k pha layout*/
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background-color: #fff;
@@ -433,9 +433,16 @@ a {
   background-color: #2e2100;
 }
 
+.feedback_list {
+  display: flex;
+  overflow: hidden;
+}
+
 .feedback_item {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .feedback_item .info {
